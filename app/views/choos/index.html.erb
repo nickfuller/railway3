@@ -1,0 +1,17 @@
+<%= flash[:success] %>
+
+<h1>Welcome! We offer the following choo choos:</h1>
+
+<%= link_to "Create Choo", "http://localhost:3000/choos/new" %>
+<ul>
+  <% @choos.each do |choo| %>
+    <li>
+      <a href='http://localhost:3000/choos/<%= choo.id %>'><%= choo.name %></a>
+      <%= link_to "Delete Choo", "http://localhost:3000/choos/#{choo.id}", :method => :delete %>
+    </li>
+  <% end %>
+</ul>
+
+
+
+  

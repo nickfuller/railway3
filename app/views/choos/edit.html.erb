@@ -1,0 +1,18 @@
+<h1>Edit <%= @choo.name %> Details</h1>
+
+<%= form_tag("http://localhost:3000/choos/#{@choo.id}", :method => :put) do %>
+  <p>
+    <%= label_tag :name, "The name of the choo choo is:" %>
+    <%= text_field_tag :name, @choo.name %>
+  </p>
+  <p>
+    <%= label_tag :frequency, "The frequency of the choo choo (in minutes) is:" %>
+    <%= text_field_tag :frequency, @choo.frequency %>
+  </p>
+  <p>
+    <%= submit_tag("Submit Choo") %>
+  </p>
+<% end %>
+
+<a href='http://localhost:3000/choos/<%= @choo.id %>'>Return to <%= @choo.name %> Details</a>
+<a href='http://localhost:3000/choos'>Return to List of Choo Choos</a>

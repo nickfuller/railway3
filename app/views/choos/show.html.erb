@@ -1,0 +1,8 @@
+<!-- in ChoosController I have @line = Choochoo.find_by_id(params[:id]) -->
+<%= flash[:success] %>
+<h1><%= @choo.name %> Details</h1>
+
+<p>For your convenience, <%= @choo.name %> runs every <%= @choo.frequency %> minutes.</p> 
+
+<a href='http://localhost:3000/choos/<%= @choo.id %>/edit'>Edit <%= @choo.name %></a>
+<a href='http://localhost:3000/choos'>Return to List of Choo Choos</a>

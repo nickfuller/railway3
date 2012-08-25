@@ -1,0 +1,21 @@
+<h1>
+  <font color=silver face="Courier">
+    Change the <% @choo.name %> choo choo below:
+  </font>
+</h1>
+
+<%= form_tag('http://localhost:3000/choos') do %>
+  <p>
+  <%= label_tag(:name, "The name of the choo choo is:") %>
+  <%= text_field_tag(:name) %>
+  </p>
+  <p>
+  <%= label_tag(:frequency, "The frequency of the choo choo (in minutes) is:") %>
+  <%= text_field_tag(:frequency) %>
+  </p>
+  <p>
+  <%= submit_tag("Submit Choo") %>
+  </p>
+<% end %>
+
+<a href='http://localhost:3000/choos'>Return to List of Choo Choos</a>
